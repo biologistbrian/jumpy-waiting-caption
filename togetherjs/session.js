@@ -114,6 +114,9 @@ define(["require", "util", "channels", "jquery", "storage"], function (require, 
         console.info("In:", msg);
         if(msg.url != null) {
           console.log("HEYYYYY")
+          if(window.location.href.slice(-1) < msg.url.slice(-1)){
+            window.location.replace(msg.url);
+          }
         }
       }
       if (! peers) {
