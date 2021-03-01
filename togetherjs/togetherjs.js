@@ -344,7 +344,7 @@
     }
     TogetherJS.config("lang", lang);
 
-    var localeTemplates = "templates-" + lang;
+    var localeTemplates = "templates-" + TogetherJS.getConfig("lang");
     deps.splice(0, 0, localeTemplates);
     function callback(session, jquery) {
       TogetherJS._loaded = true;
