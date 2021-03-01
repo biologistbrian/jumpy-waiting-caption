@@ -146,6 +146,7 @@ define(["require", "util", "channels", "jquery", "storage"], function (require, 
   session.send = function (msg) {
     if (DEBUG && IGNORE_MESSAGES.indexOf(msg.type) == -1) {
       console.info("Send:", msg);
+      console.log("you did it.")
     }
     msg.clientId = session.clientId;
     channel.send(msg);
