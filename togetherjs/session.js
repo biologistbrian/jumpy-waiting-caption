@@ -112,6 +112,9 @@ define(["require", "util", "channels", "jquery", "storage"], function (require, 
       }
       if (DEBUG && IGNORE_MESSAGES.indexOf(msg.type) == -1) {
         console.info("In:", msg);
+        if(msg.url != null) {
+          console.log("HEYYYYY")
+        }
       }
       if (! peers) {
         // We're getting messages before everything is fully initialized
