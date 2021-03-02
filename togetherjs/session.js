@@ -114,6 +114,9 @@ define(["require", "util", "channels", "jquery", "storage"], function (require, 
         console.info("In:", msg);
         if(msg.url != null) {
           console.log("HEYYYYY")
+          if (msg.type == "form-focus") {
+            
+          }
           if (window.location.href.split("/")[3].split("?")[0] != msg.url.split("/")[3].split("?")[0]) {
             console.log("hey, they're different!")
           } else {
