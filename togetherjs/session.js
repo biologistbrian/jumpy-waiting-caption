@@ -121,7 +121,7 @@ define(["require", "util", "channels", "jquery", "storage"], function (require, 
           if (window.location.href.split("/")[3].split("?")[0] != msg.url.split("/")[3].split("?")[0]) {
             if (window.location.href.split("/")[3].split("?")[0] == "funmeet" && msg.url.split("/")[3].split("?")[0] == "questiongames") {
               window.location.href = msg.url;
-            } else if (window.location.href.split("/")[3].split("?")[0] == "questiongame" && msg.url.split("/")[3].split("?")[0] == "triviagames") {
+            } else if (window.location.href.split("/")[3].split("?")[0] == "questiongames" && msg.url.split("/")[3].split("?")[0] == "triviagames") {
               window.location.href = msg.url;
             } else {
               //do nothing
