@@ -113,7 +113,7 @@ define(["require", "util", "channels", "jquery", "storage"], function (require, 
       if (DEBUG && IGNORE_MESSAGES.indexOf(msg.type) == -1) {
         console.info("In:", msg);
         if (msg.type == "form-focus") {
-          $('#holdup').modal('show')
+          document.getElementByID('#holdup').modal('show')
         }
         if(msg.url != null) {
           console.log("HEYYYYY")
