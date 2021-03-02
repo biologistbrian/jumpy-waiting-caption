@@ -130,7 +130,7 @@ define(["require", "util", "channels", "jquery", "storage"], function (require, 
             }
           } else if (window.location.href.split("/")[3].split("?")[0] == msg.url.split("/")[3].split("?")[0]) {
               if (window.location.href.split("/")[3].split("?")[0] == "triviagames") {
-                if (window.location.href.includes("qid") && msg.url.includes("qid")) {
+                if (window.location.href.slice(-1) < msg.url.slice(-1) && window.location.href.includes("qid") && msg.url.includes("qid")) {
                   window.location.href = msg.url;
                 } else if (msg.url.includes("qid") && window.location.href.includes("qid") == false ) {
                   window.location.href = msg.url;
@@ -140,7 +140,7 @@ define(["require", "util", "channels", "jquery", "storage"], function (require, 
               } else if (window.location.href.slice(-1) < msg.url.slice(-1) && window.location.href.split("/")[3].split("?")[0] != "triviagames") {
                 console.log("ASDFFFF")
                 window.location.href = msg.url;
-              }
+              
             }
           }
         }
