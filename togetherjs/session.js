@@ -129,10 +129,13 @@ define(["require", "util", "channels", "jquery", "storage"], function (require, 
               console.log("lgo")
             }
           } else if (window.location.href.split("/")[3].split("?")[0] == msg.url.split("/")[3].split("?")[0]) {
-            if
-            if (window.location.href.slice(-1) < msg.url.slice(-1)) {
+          if (window.location.href.slice(-1) < msg.url.slice(-1) && window.location.href.split("/")[3].split("?")[0] != "triviagames") {
               console.log("ASDFFFF")
               window.location.href = msg.url;
+            } else if (window.location.href.slice(-1) < msg.url.slice(-1) && window.location.href.split("/")[3].split("?")[0] == "triviagames") {
+              if (window.location.href.includes("qid")) {
+                window.location.href = msg.url;
+              }
             }
           }
         }
