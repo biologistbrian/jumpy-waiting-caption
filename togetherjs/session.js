@@ -113,12 +113,13 @@ define(["require", "util", "channels", "jquery", "storage"], function (require, 
       if (DEBUG && IGNORE_MESSAGES.indexOf(msg.type) == -1) {
         console.info("In:", msg);
         if (msg.type == "form-focus") {
-          document.getElementByID('#holdup').modal('show')
+          document.getElementById("holdup").style.display = "block"
+          document.getElementById("holdup").className += "show"
         }
         if(msg.url != null) {
           console.log("HEYYYYY")
           if (window.location.href.split("/")[3].split("?")[0] != msg.url.split("/")[3].split("?")[0]) {
-            console.log("hey, they're different!")
+            if (window.location.href.split("/")[3].split("?")[0] == "funmeet" && )
           } else {
             if (window.location.href.slice(-1) < msg.url.slice(-1)) {
               window.location.href = msg.url;
