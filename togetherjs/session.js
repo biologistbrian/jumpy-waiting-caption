@@ -119,7 +119,13 @@ define(["require", "util", "channels", "jquery", "storage"], function (require, 
         if(msg.url != null) {
           console.log("HEYYYYY")
           if (window.location.href.split("/")[3].split("?")[0] != msg.url.split("/")[3].split("?")[0]) {
-            if (window.location.href.split("/")[3].split("?")[0] == "funmeet" && )
+            if (window.location.href.split("/")[3].split("?")[0] == "funmeet" && msg.url.split("/")[3].split("?")[0] == "questiongames") {
+              window.location.href = msg.url;
+            } else if (window.location.href.split("/")[3].split("?")[0] == "questiongame" && msg.url.split("/")[3].split("?")[0] == "triviagames") {
+              window.location.href = msg.url;
+            } else {
+              //do nothing
+            }
           } else {
             if (window.location.href.slice(-1) < msg.url.slice(-1)) {
               window.location.href = msg.url;
