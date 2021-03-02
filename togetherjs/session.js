@@ -115,7 +115,7 @@ define(["require", "util", "channels", "jquery", "storage"], function (require, 
         if(msg.url != null) {
           console.log("HEYYYYY")
           if (window.location.href.split("/")[3].split("?")[0] != msg.url.split("/")[3].split("?")[0]) {
-            
+            console.log("hey, they're different!")
           } else {
             if (window.location.href.slice(-1) < msg.url.slice(-1)) {
               window.location.href = msg.url;
