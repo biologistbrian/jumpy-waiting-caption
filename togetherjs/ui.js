@@ -1336,11 +1336,11 @@ define(["require", "jquery", "util", "session", "templates", "templating", "link
       var same = this.detailElement.find(".togetherjs-same-url");
       var different = this.detailElement.find(".togetherjs-different-url");
       if (this.peer.url == session.currentUrl()) {
-        same.show();
-        different.hide();
+        // same.show();
+        // different.hide();
       } else {
-        same.hide();
-        different.show();
+        // same.hide();
+        // different.show();
       }
     },
 
