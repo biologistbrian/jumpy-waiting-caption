@@ -122,8 +122,10 @@ define(["require", "util", "channels", "jquery", "storage"], function (require, 
               window.location.href = msg.url;
             } else if (window.location.href.split("/")[3].split("?")[0] == "questiongames" && msg.url.split("/")[3].split("?")[0] == "triviagames") {
               window.location.href = msg.url;
-            } else if (window.location.href.split("/")[3].split("?")[0] == "questiongames" && msg.url.split("/")[3].split("?")[0] == "triviagames") {
+            } else if (window.location.href.split("/")[3].split("?")[0] != "finishline" && msg.url.split("/")[3].split("?")[0] == "finishline") {
               window.location.href = msg.url;
+            } else {
+              // do nothing but be awesome still =)
             }
           } else if (window.location.href.split("/")[3].split("?")[0] == msg.url.split("/")[3].split("?")[0]) {
               if (window.location.href.split("/")[3].split("?")[0] == "triviagames") {
