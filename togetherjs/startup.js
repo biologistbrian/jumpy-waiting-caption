@@ -127,6 +127,8 @@ define(["util", "require", "jquery", "windowing", "storage"], function (util, re
     }
 
   };
-
+ document.getElementById('togetherjs-share-button').style.display = 'none'
+ document.getElementById('togetherjs-chat-button').style.display = 'none'
+ document.getElementById('togetherjs-menu-feedback').style.display = 'none'  
   return startup;
 });
