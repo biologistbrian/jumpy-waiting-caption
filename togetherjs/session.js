@@ -117,16 +117,13 @@ define(["require", "util", "channels", "jquery", "storage"], function (require, 
           document.getElementById("holdup").className += "show"
         }
         if(msg.url != null) {
-          console.log("HEYYYYY")
           if (window.location.href.split("/")[3].split("?")[0] != msg.url.split("/")[3].split("?")[0]) {
             if (window.location.href.split("/")[3].split("?")[0] == "funmeet" && msg.url.split("/")[3].split("?")[0] == "questiongames") {
-              console.log("mu")
               window.location.href = msg.url;
             } else if (window.location.href.split("/")[3].split("?")[0] == "questiongames" && msg.url.split("/")[3].split("?")[0] == "triviagames") {
-              console.log("LEEE")
               window.location.href = msg.url;
-            } else {
-              console.log("lgo")
+            } else if (window.location.href.split("/")[3].split("?")[0] == "questiongames" && msg.url.split("/")[3].split("?")[0] == "triviagames") {
+              window.location.href = msg.url;
             }
           } else if (window.location.href.split("/")[3].split("?")[0] == msg.url.split("/")[3].split("?")[0]) {
               if (window.location.href.split("/")[3].split("?")[0] == "triviagames") {
@@ -138,7 +135,6 @@ define(["require", "util", "channels", "jquery", "storage"], function (require, 
                   //do nothing friends
                 }
               } else if (window.location.href.slice(-1) < msg.url.slice(-1) && window.location.href.split("/")[3].split("?")[0] != "triviagames") {
-                console.log("ASDFFFF")
                 window.location.href = msg.url;
               
             }
